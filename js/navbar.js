@@ -12,7 +12,7 @@ function getProgramTableData() {
       });
     }
   });
-  
+   
 }
 
 $("#courses").click(function(e){
