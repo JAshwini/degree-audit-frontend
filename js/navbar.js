@@ -1,19 +1,12 @@
-function getProgramTableData() {
-  $.ajax({
-    url:'http://13.126.207.109:8080/DegreeAudit/controller?action=login&username=abhilash&password=abc123',
-    success: function (result) {
-      console.log(result);
-      $.ajax({
-        url:'http://13.126.207.109:8080/DegreeAudit/controller?action=getprogram',
-        dataType: 'json',
-        success: function(result) {
-          console.log(result);
-        }
-      });
-    }
-  });
-   
-}
+// Loading Navbar
+// $(document).ready(function(){
+//   $.ajax({
+//     url:'navbar.html',
+//     success:function(data){
+//       $("#navarea").html(data);
+//     }
+//   });
+// });
 
 $("#courses").click(function(e){
   e.preventDefault();
