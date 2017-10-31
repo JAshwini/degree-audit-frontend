@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 </head>
-<body>
-Username: <input type="text" name="username">
-Password: <input type="password" name="password">
-<button class="submit">Submit</button>
+<body>			
+    <div class="container">
+    <div class="manage">
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Sign in</h2>
+        
+        <input type="text" id="inputEmail" class="form-control" placeholder="Username" required="">
+        
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <a type="button" class="btn btn-md btn-primary" href="">Sign in</a>
+        <label><a href="">Forgot Password?</a></label>
+
+      </form>
+    </div>
+    </div>
 </body>
 </html>
-
-<script type="text/javascript">
-	$(".submit").click(function () {
-		$.ajax({
-			
-		});
-	});
-</script>
