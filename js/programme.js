@@ -1,16 +1,14 @@
-$(document).ready(function(){
-  $(".btn-danger").click(function(e){
-    e.preventDefault();
-    $(this).text('Add');
-    $(this).removeClass("btn-danger").addClass("btn-primary");
-    var tr = $(this).closest("tr").remove().clone();
-    $("#masterList tbody").append(tr);
-  });
-  $(".btn-primary").click(function(e){
-    e.preventDefault();
-    $(this).text('Remove');
-    $(this).removeClass("btn-primary").addClass("btn-danger");
-    var tr = $(this).closest("tr").remove().clone();
-    $("#semesterTable tbody").append(tr);
-  });
+$("tr").on("click", "#remove", function(){
+      $(this).text('Add');
+      $(this).addClass('btn-primary').removeClass('btn-danger').attr('id','add-btn');
+      var tr = $(this).parent().parent();
+      $('#masterList').append(tr);
+});
+
+$("tr").on("click", "#add-btn", function(){
+    console.log('aaa');
+      $(this).text('Remove');
+      $(this).removeClass('btn-primary').addClass('btn-danger').attr('id','remove');
+      var tr = $(this).parent().parent();
+      $('#semesterTable').append(tr);
 });
